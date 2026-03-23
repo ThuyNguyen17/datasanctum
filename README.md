@@ -39,5 +39,4 @@ python UI/main.py
 - `UI/core/assets/`: Chứa các bộ dữ liệu mô hình và biểu tượng.
 - `classified_files/`: Thư mục chứa các tệp sau khi đã được phân loại theo chủ đề.
 
-## 📜 Giấy phép
-Dự án được phát triển nhằm mục đích nghiên cứu và hỗ trợ quản lý dữ liệu cá nhân một cách an toàn.
+![Screenshot 2026-03-23 182822](https://github.com/user-attachments/assets/3b46fa66-bfb9-49e4-be76-29cb392b3ac0)
