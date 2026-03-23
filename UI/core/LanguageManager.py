@@ -1,0 +1,91 @@
+class LanguageManager:
+    def __init__(self, app):
+        self.app = app
+        self.current_language = "en"
+        self.translations = {
+            "en": {
+                "title": "DataSanctum File Analyzer",
+                "open_file": "Open File",
+                "clear": "Clear",
+                "analyze_text": "Analyze Text",
+                "dark_mode": "Dark Mode",
+                "light_mode": "Light Mode",
+                "auto_analyze": "Auto Analyze",
+                "show_preview": "Show Preview",
+                "drag_drop": "Drag & Drop Files Here",
+                "browse": "or click to browse files",
+                "formats": "Supports: TXT, PDF, DOCX, CSV",
+                "recent_files": "Recent Files",
+                "clear_history": "Clear History",
+                "status_ready": "Ready",
+                "status_processing": "Processing: {}",
+                "status_done": "Done: {}",
+                "status_error": "Error: {}",
+                "content": "Content",
+                "metadata": "Metadata",
+                "analysis": "Analysis",
+                "visualization": "Visualization",
+                "file_name": "File Name",
+                "file_size": "File Size",
+                "file_type": "File Type",
+                "created": "Created",
+                "modified": "Modified",
+                "text_stats": "Text Statistics",
+                "word_count": "Word Count",
+                "unique_words": "Unique Words",
+                "char_count": "Character Count",
+                "sentence_count": "Sentence Count",
+                "reading_time": "Reading Time",
+                "appearance": "Appearance",
+                "ui_scale": "UI Scale",
+                "language": "Language",
+                "file_actions": "File Actions",
+                "options": "Options"
+            },
+            "vi": {
+                "title": "DataSanctum - Phân Tích Tập Tin",
+                "open_file": "Mở Tập Tin",
+                "clear": "Xóa",
+                "analyze_text": "Phân Tích Văn Bản",
+                "dark_mode": "Chế Độ Tối",
+                "light_mode": "Chế Độ Sáng",
+                "auto_analyze": "Tự Động Phân Tích",
+                "show_preview": "Hiển Thị Xem Trước",
+                "drag_drop": "Kéo & Thả Tập Tin Vào Đây",
+                "browse": "hoặc nhấn để chọn tập tin",
+                "formats": "Hỗ Trợ: TXT, PDF, DOCX, CSV",
+                "recent_files": "Tập Tin Gần Đây",
+                "clear_history": "Xóa Lịch Sử",
+                "status_ready": "Sẵn Sàng",
+                "status_processing": "Đang Xử Lý: {}",
+                "status_done": "Hoàn Thành: {}",
+                "status_error": "Lỗi: {}",
+                "content": "Nội Dung",
+                "metadata": "Siêu Dữ Liệu",
+                "analysis": "Phân Tích",
+                "visualization": "Trực Quan Hóa",
+                "file_name": "Tên Tập Tin",
+                "file_size": "Kích Thước",
+                "file_type": "Loại Tập Tin",
+                "created": "Tạo Lúc",
+                "modified": "Sửa Lúc",
+                "text_stats": "Thống Kê Văn Bản",
+                "word_count": "Số Từ",
+                "unique_words": "Từ Duy Nhất",
+                "char_count": "Số Ký Tự",
+                "sentence_count": "Số Câu",
+                "reading_time": "Thời Gian Đọc",
+                "appearance": "Giao Diện",
+                "ui_scale": "Tỷ Lệ Giao Diện",
+                "language": "Ngôn Ngữ",
+                "file_actions": "Hành Động",
+                "options":"Lựa chọn",
+            }
+        }
+
+    def set_language(self, lang):
+        self.current_language = "en" if lang == "English" else "vi"
+        self.app.update_ui_text()
+
+    def get_text(self, key):
+        return self.translations[self.current_language].get(key, key)
